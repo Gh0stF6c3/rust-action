@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     name: rust自动工作流
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps: 
       - name: 访问仓库
