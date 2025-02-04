@@ -1,0 +1,27 @@
+name: 持续集成
+
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # 允许手动运行工作流
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: rust自动工作流
+    runs_on: ubuntu-latest
+
+    steps: 
+      - name: 访问仓库
+        uses: actions/checkout@v2
+
+      - name: 运行终端指令
+        run: echo "hello,world!"
+        
+      - name: 多组指令运行
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
